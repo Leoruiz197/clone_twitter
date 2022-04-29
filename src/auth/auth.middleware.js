@@ -24,8 +24,6 @@ module.exports = async (req, res, next) => {
     jwt.verify(token, process.env.SECRET, async (err, decoded) => {
       
         const user = await findByIdUserService(decoded.id);
-        console.log(user.id);
-        console.log(user.name);
         if (err || !user || !user.id) {
           return res.status(401).send({ message: "Token inválido!" });
         }
