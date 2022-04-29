@@ -1,10 +1,10 @@
 const User = require("../model/User");
 
-const findByEmailUserService = (email) => User.findOne({ email: email });
+const findByEmailUserService = async (email) => await User.findOne({ email: email });
 
-const createUserService = (body) => User.create(body);
+const createUserService = async (body) => await User.create(body);
 
-const findAllUserService = () => User.find();
+const findAllUserService = async () => await User.find();
 
 const  findByIdUserService  = async (idUser) => await User.findById(idUser);
 

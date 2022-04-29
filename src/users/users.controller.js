@@ -29,7 +29,7 @@ const createUserController = async (req, res) => {
       });
   }
 
-  const token = authService.generateToken(user.id);
+  const token = await authService.generateToken(user.id);
 
   res.status(201).send({
   user: {
