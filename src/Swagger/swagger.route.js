@@ -4,5 +4,5 @@ const swaggerDocument = require("./swagger.json");
 
 router.use("/", swaggerUi.serve);
 router.get("/", swaggerUi.setup(swaggerDocument));
-
+//teste
 module.exports = router;
